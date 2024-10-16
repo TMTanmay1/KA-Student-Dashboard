@@ -14,6 +14,8 @@ const AppLayout = () => {
     Cookies.remove('Login');
     navigate('/');
   }
+
+  const user = localStorage.getItem('name');
   
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>
@@ -37,7 +39,7 @@ const AppLayout = () => {
             height: '64px', // Match the height of the Sidebar
           }}
         >
-          <Typography variant="h6">Krishna Academy</Typography>
+          <Typography variant="h6">Welcome, {user}</Typography>
 
           <Button type="primary" style={{ marginLeft: 'auto', backgroundColor:'red' }}
             onClick={handleLogout}

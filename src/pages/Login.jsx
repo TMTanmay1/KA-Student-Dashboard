@@ -52,6 +52,7 @@ const Login = () => {
       if (response.ok) {
         localStorage.setItem('authToken', result.data.token);
         localStorage.setItem('id', result.data.id);
+        localStorage.setItem('name', result.data.name);
         setSnackbarMessage('Login successful');
         setSnackbarSeverity('success');
         setSnackbarOpen(true);
